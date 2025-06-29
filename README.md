@@ -5,7 +5,7 @@ A comprehensive command-line tool for deploying full-stack applications to multi
 ## 🚀 Supported Platforms
 
 - **Vercel** - Fast deployments with edge functions
-- **Cloudflare Pages** - Global CDN with edge computing  
+- **Cloudflare Pages** - Global CDN with edge computing
 - **Netlify** - JAMstack deployments with form handling
 
 ## 📦 Supported Project Types
@@ -47,8 +47,8 @@ A comprehensive command-line tool for deploying full-stack applications to multi
 mkdir -p ~/deploy-cli
 cd ~/deploy-cli
 
-# Clone the repository (replace with your GitHub repo URL)
-git clone https://github.com/yourusername/universal-deploy-cli.git .
+# Clone the repository
+git clone https://github.com/Archit-Jain-Github/universal-deploy-cli.git
 ```
 
 ### Step 2: Make the Script Executable
@@ -106,7 +106,7 @@ deploy
 
 # Deploy to specific platform
 deploy -p vercel
-deploy -p cloudflare  
+deploy -p cloudflare
 deploy -p netlify
 
 # Check deployment status
@@ -154,15 +154,18 @@ deploy --status -p netlify
 The tool will automatically handle authentication for each platform:
 
 ### Vercel
+
 - Runs `vercel login` if not authenticated
 - Opens browser for OAuth authentication
 
 ### Cloudflare Pages
+
 - Prompts for API token if not authenticated
 - Get token from: https://dash.cloudflare.com/profile/api-tokens
 - Requires "Cloudflare Pages:Edit" permission
 
 ### Netlify
+
 - Runs `netlify login` if not authenticated
 - Opens browser for OAuth authentication
 
@@ -171,6 +174,7 @@ The tool will automatically handle authentication for each platform:
 The tool automatically creates platform-specific configuration files:
 
 ### Vercel (`vercel.json`)
+
 ```json
 {
   "version": 2,
@@ -187,6 +191,7 @@ The tool automatically creates platform-specific configuration files:
 ```
 
 ### Cloudflare Pages (`wrangler.toml`)
+
 ```toml
 name = "my-project"
 compatibility_date = "2023-12-01"
@@ -197,6 +202,7 @@ pages_build_output_dir = "dist"
 ```
 
 ### Netlify (`netlify.toml`)
+
 ```toml
 [build]
   command = "npm run build"
@@ -225,6 +231,7 @@ chmod +x ~/.local/bin/deploy
 ## 🐛 Troubleshooting
 
 ### Command not found
+
 ```bash
 # Check if PATH is set correctly
 echo $PATH | grep -q "$HOME/.local/bin" && echo "PATH is set" || echo "PATH not set"
@@ -234,18 +241,22 @@ source ~/.zshrc  # or ~/.bash_profile
 ```
 
 ### Permission denied
+
 ```bash
 # Make sure the script is executable
 chmod +x ~/.local/bin/deploy
 ```
 
 ### CLI tools not found
+
 The script will automatically install required CLI tools:
+
 - Vercel CLI: `npm install -g vercel`
 - Wrangler CLI: `npm install -g wrangler`
 - Netlify CLI: `npm install -g netlify-cli`
 
 ### Authentication issues
+
 ```bash
 # Clear authentication and re-authenticate
 vercel logout && vercel login
@@ -256,6 +267,7 @@ wrangler logout && wrangler login
 ## 📝 Development
 
 ### Directory Structure
+
 ```
 universal-deploy-cli/
 ├── deploy              # Main deployment script
