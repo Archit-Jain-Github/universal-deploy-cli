@@ -273,10 +273,6 @@ universal-deploy-cli/
 ├── deploy              # Main deployment script
 ├── README.md          # This file
 ├── .gitignore         # Git ignore file
-└── examples/          # Example projects
-    ├── react-app/
-    ├── nextjs-app/
-    └── static-site/
 ```
 
 ### Contributing
@@ -287,11 +283,7 @@ universal-deploy-cli/
 4. Test thoroughly
 5. Submit a pull request
 
-## 📄 License
-
-MIT License - see LICENSE file for details
-
-## 🆘 Support
+## Support
 
 If you encounter any issues:
 
@@ -301,7 +293,3 @@ If you encounter any issues:
    - [Cloudflare Pages Documentation](https://developers.cloudflare.com/pages)
    - [Netlify Documentation](https://docs.netlify.com)
 3. Open an issue on GitHub
-
-## 🎉 Success!
-
-You should now be able to deploy any full-stack application using the `deploy` command from anywhere in your terminal!
